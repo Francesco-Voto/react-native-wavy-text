@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import { StyleSheet, View } from 'react-native';
-import { WavyTextView } from 'react-native-wavy-text';
+import { StyleSheet, View, Text } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <WavyTextView color="#32a852" style={styles.box} />
+      <Text style={styles.wavyText}>A wavy Text</Text>
     </View>
   );
 }
@@ -17,9 +16,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+  wavyText: {
+    fontSize: 24,
+    height: 32,
+    textDecorationColor: 'red',
+    textDecorationLine: 'underline',
+    textDecorationStyle: 'wavy',
+    
+  }
 });
